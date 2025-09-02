@@ -16,7 +16,7 @@ class MyServer(BaseHTTPRequestHandler):
         self.send_header("Content-type", "text/html") # Отправка типа данных, который будет передаваться
         self.end_headers() # Завершение формирования заголовков ответа
         # Чтение содержимого HTML-файла
-        html_file_path = "contacts.html"  # Путь к HTML-файлу
+        html_file_path = "templates/contacts.html"  # Путь к HTML-файлу
         if os.path.exists(html_file_path):
             with open(html_file_path, "r", encoding="utf-8") as file:
                 content = file.read()
